@@ -32,5 +32,13 @@ describe('(Component) Header', () => {
         </Link>
       )).to.be.true
     })
+
+    it('Should render a Link to Login route', () => {
+      expect(_wrapper.contains(
+        <Link activeClassName='route--active' to='/login'>
+          Login
+        </Link>
+      )).to.be.true
+    })
   })
 })
