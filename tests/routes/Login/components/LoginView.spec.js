@@ -18,6 +18,6 @@ describe('(View) Login', () => {
   it('Renders login form', () => {
     const loginForm = _component.find('form')
     expect(loginForm).to.exist
-    expect(loginForm.attr('id')).to.match(/login-form/)
+    expect(loginForm.children().length).to.equal(3)
   })
 })
