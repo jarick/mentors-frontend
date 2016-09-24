@@ -13,7 +13,8 @@ describe('(Component) Header', () => {
   it('Renders a welcome message', () => {
     const welcome = _wrapper.find('h1')
     expect(welcome).to.exist
-    expect(welcome.text()).to.match(/React Redux Starter Kit/)
+    expect(welcome.text()).to.match(/Ментор всегда рядом/)
+    expect(welcome.hasClass('mentor-header-text')).to.be.true
   })
 
   describe('Navigation links...', () => {

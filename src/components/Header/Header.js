@@ -4,7 +4,7 @@ import './Header.scss'
 
 export const Header = () => (
   <div>
-    <h1>React Redux Starter Kit</h1>
+    <h1 className="mentor-header-text">Ментор всегда рядом</h1>
     <IndexLink to='/' activeClassName='route--active'>
       Home
     </IndexLink>
