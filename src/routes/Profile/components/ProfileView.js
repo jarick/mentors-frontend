@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 const If = React.createClass({
@@ -6,12 +7,12 @@ const If = React.createClass({
   }
 })
 
-export const LoginView = (props) => (
+export const ProfileView = (props) => (
   <div className="row">
     <div className="row" style={{textAlign: "center"}}>
-      <h2 className="header">Логин на сайт</h2>
+      <h2 className="header">Личный кабинет</h2>
     </div>
-    <If test={props.login.isFail} >
+    <If test={props.profile.isFail} >
       <div className="row">
         <div className="col s8 offset-s2">
           <div className="card-panel red lighten-2">
@@ -23,16 +24,23 @@ export const LoginView = (props) => (
     <form className="col s12" onSubmit={props.onSubmit}>
       <div className="row">
         <div className="input-field col s8 offset-s2">
-          <input name="mail" required="true" id="mail" type="email"
-                 value={props.login.data.mail} onChange={props.onChangeInput}/>
-          <label htmlFor="mail">E-Mail</label>
+          <input name="name" id="name" type="text"
+                 value={props.profile.data.name} onChange={props.onChangeInput} />
+          <label htmlFor="name">Имя</label>
         </div>
       </div>
-        <div className="row">
+      <div className="row">
         <div className="input-field col s8 offset-s2">
-          <input id="password" name="password" required="true" minLength="8" type="password"
-                 value={props.login.data.password} onChange={props.onChangeInput}/>
-          <label htmlFor="password">Пароль</label>
+          <input name="lastName" id="lastName" type="text"
+                 value={props.profile.data.lastName} onChange={props.onChangeInput} />
+          <label htmlFor="lastName">Фамилия</label>
+        </div>
+      </div>
+      <div className="row">
+        <div className="input-field col s8 offset-s2">
+          <input name="avatar" id="avatar" type="text"
+                 value={props.profile.data.avatar} onChange={props.onChangeInput} />
+          <label htmlFor="avatar">Аватар</label>
         </div>
       </div>
       <div className="row">

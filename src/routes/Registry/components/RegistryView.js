@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 const If = React.createClass({
@@ -6,12 +7,12 @@ const If = React.createClass({
   }
 })
 
-export const LoginView = (props) => (
+export const RegistryView = (props) => (
   <div className="row">
     <div className="row" style={{textAlign: "center"}}>
-      <h2 className="header">Логин на сайт</h2>
+      <h2 className="header">Регистрация</h2>
     </div>
-    <If test={props.login.isFail} >
+    <If test={props.registry.isFail} >
       <div className="row">
         <div className="col s8 offset-s2">
           <div className="card-panel red lighten-2">
@@ -24,15 +25,8 @@ export const LoginView = (props) => (
       <div className="row">
         <div className="input-field col s8 offset-s2">
           <input name="mail" required="true" id="mail" type="email"
-                 value={props.login.data.mail} onChange={props.onChangeInput}/>
+                 value={props.registry.data.mail} onChange={props.onChangeInput}/>
           <label htmlFor="mail">E-Mail</label>
-        </div>
-      </div>
-        <div className="row">
-        <div className="input-field col s8 offset-s2">
-          <input id="password" name="password" required="true" minLength="8" type="password"
-                 value={props.login.data.password} onChange={props.onChangeInput}/>
-          <label htmlFor="password">Пароль</label>
         </div>
       </div>
       <div className="row">

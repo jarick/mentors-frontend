@@ -116,8 +116,7 @@ webpackConfig.module.loaders.push({
   loaders : [
     'style',
     BASE_CSS_LOADER,
-    'postcss',
-    'sass?sourceMap'
+    'postcss'
   ]
 })
 webpackConfig.module.loaders.push({
@@ -130,9 +129,6 @@ webpackConfig.module.loaders.push({
   ]
 })
 
-webpackConfig.sassLoader = {
-  includePaths : paths.client('styles')
-}
 
 webpackConfig.postcss = [
   cssnano({

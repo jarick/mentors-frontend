@@ -1,22 +1,19 @@
 import React from 'react'
-import { IndexLink, Link } from 'react-router'
-import './Header.scss'
+import './Header.css'
 
 export const Header = () => (
-  <div>
-    <h1 className="mentor-header-text">Ментор всегда рядом</h1>
-    <IndexLink to='/' activeClassName='route--active'>
-      Home
-    </IndexLink>
-    {' · '}
-    <Link to='/counter' activeClassName='route--active'>
-      Counter
-    </Link>
-    {' · '}
-    <Link to='/login' activeClassName='route--active'>
-      Login
-    </Link>
-  </div>
+  <nav>
+    <div className='container'>
+      <div className="nav-wrapper">
+        <a href="/" className="brand-logo">Ментор всегда рядом</a>
+        <ul id="nav-mobile" className="right hide-on-med-and-down">
+          <li><a href="/">Компетенции</a></li>
+          <li><a href="/">Мои задачи</a></li>
+          <li><a href="/profile">Профиль</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 )
 
 export default Header
